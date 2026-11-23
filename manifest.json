@@ -1,0 +1,20 @@
+
+{
+  "id": "/JuegoDelTemporizador5/",
+  "name": "Para ti, en diciembre",
+  "short_name": "Para ti",
+  "description": "Treinta regalos, recuerdos y sorpresas para ti.",
+  "start_url": "/JuegoDelTemporizador5/",
+  "scope": "/JuegoDelTemporizador5/",
+  "display": "standalone",
+  "background_color": "#f8f5ee",
+  "theme_color": "#731e2b",
+  "icons": [
+    {
+      "src": "/JuegoDelTemporizador5/assets/gift-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

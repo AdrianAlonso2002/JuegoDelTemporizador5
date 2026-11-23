@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#731e2b">
+  <meta name="description" content="Un diciembre hecho para ti. Treinta regalos, recuerdos y pequeñas sorpresas por descubrir.">
+  <title>Para ti, en diciembre · Nuestro quinto capítulo</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="assets/gift-icon.svg">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Para ti">
+  <link rel="icon" href="assets/gift-icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Italiana&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="advent-state.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div id="snowfall" aria-hidden="true"></div>
+  <div class="announcement">UNA TRADICIÓN NUESTRA, UNA NUEVA FORMA DE VIVIRLA <span>✧</span> EDICIÓN 2026</div>
+  <header class="header wrap">
+    <a class="brand" href="#" aria-label="Para ti, inicio"><span class="brand-star">✳</span> para ti<span class="brand-period">.</span></a>
+    <nav aria-label="Navegación principal"><a href="#calendario" class="nav-active">El calendario</a><button id="letter-button">Una pequeña carta <span>♡</span></button></nav>
+    <span class="chapter">NUESTRO QUINTO CAPÍTULO</span>
+  </header>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow"><span></span> 29 DÍAS DE DICIEMBRE & UN CUMPLEAÑOS</p>
+        <h1 id="hero-title">Mi lugar favorito<br>en Navidad <em>eres tú.</em></h1>
+        <p class="intro">Un poquito de nosotros, envuelto para cada día.<br>Abre un regalo, guarda un recuerdo y déjate sorprender.</p>
+        <a class="primary-button" href="#calendario">Descubrir el calendario <span>✧</span></a>
+        <p class="hero-note"><span>♡</span> Hecho con amor. Solo para ti.</p>
+      </div>
+      <div class="hero-art" role="img" aria-label="Regalos navideños envueltos con lazos, una postal y una rama de abeto">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <span class="art-spark spark-one">✦</span><span class="art-spark spark-two">✧</span><span class="art-spark spark-three">✧</span>
+        <svg class="pine" viewBox="0 0 220 210" fill="none" aria-hidden="true"><g stroke="#385047" stroke-width="2"><path d="M190 8 48 200M177 26l-59 12m53-4-12-29m-1 47-72 9m62 4-14-47m-1 67-79 3m64 18-12-58m-4 80-75-8m63 25-20-57m5 80-58-14m47 32-25-51"/><path d="m176 27-46-4m31 26-18-37m2 59-63-22m47 43-24-53m8 77-71-21m58 41-30-57m15 76-64-22"/></g></svg>
+        <div class="art-card"><span>A veces, el mejor regalo</span><strong>es tenerte<br>cerquita.</strong><span class="card-heart">♡</span></div>
+        <div class="hero-gift gift-back"><div class="gift-ribbon vertical"></div><div class="gift-ribbon horizontal"></div><div class="bow"><i></i><i></i></div><span class="gift-tag">con amor ♡</span><span class="sparkle sp-1">✦</span><span class="sparkle sp-2">✧</span><span class="sparkle sp-3">✦</span></div>
+        <div class="hero-gift gift-front"><div class="gift-ribbon vertical"></div><div class="gift-ribbon horizontal"></div><div class="bow"><i></i><i></i></div><span class="gift-star">✳</span><span class="sparkle sp-1">✦</span><span class="sparkle sp-2">✧</span><span class="sparkle sp-3">✦</span></div>
+        <span class="art-caption">29 sorpresas & un misterio más</span>
+      </div>
+    </section>
+    <section class="calendar-section wrap" id="calendario" aria-labelledby="calendar-title">
+      <div class="section-heading"><div><p class="eyebrow">LA ILUSIÓN TAMBIÉN SE CUENTA EN DÍAS</p><h2 id="calendar-title">Nuestro diciembre<span>✧</span></h2></div><div class="calendar-meta"><span id="progress-label">0 de 30 regalos abiertos</span><div class="progress-track"><span id="progress-fill"></span></div></div></div>
+      <div class="calendar-toolbar"><p><span class="tiny-gift">♧</span> Cada día, un lazo menos y una sonrisa más.</p><div class="legend"><span><i class="legend-today"></i> Por descubrir</span><span><i class="legend-locked"></i> Aún es un secreto</span></div></div>
+      <div id="preview-banner" class="preview-banner" hidden>Demo: las fechas están adelantadas, pero el orden y los retos se mantienen. Tu progreso real no cambia. <button id="exit-preview">Salir de la demo</button><button id="reset-preview">Reiniciar la demo</button></div>
+      <div class="calendar-grid" id="calendar-grid"></div>
+      <div class="calendar-bottom"><span>Sin prisa. Las cosas bonitas merecen su momento.</span><span>♡</span><span id="countdown"></span></div>
+    </section>
+    <section class="closing wrap"><span>✧</span><p>No son solo regalos.<br><em>Son más razones para elegirte.</em></p></section>
+  </main>
+  <footer class="wrap"><a class="brand" href="#">para ti.</a><span>Desde el primer juego, hasta todos los que nos quedan.</span><button hidden id="preview-button">Test</button></footer>
+  <dialog id="gift-dialog" aria-labelledby="dialog-title"><button class="close-dialog" aria-label="Cerrar">×</button><div id="dialog-content"></div><div id="dialog-sparkles" aria-hidden="true"></div></dialog>
+  
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

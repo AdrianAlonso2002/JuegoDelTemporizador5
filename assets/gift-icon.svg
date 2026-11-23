@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#932839"/>
+      <stop offset="100%" stop-color="#54121d"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf4df"/>
+      <stop offset="35%" stop-color="#e8cf96"/>
+      <stop offset="70%" stop-color="#c9a861"/>
+      <stop offset="100%" stop-color="#9b7834"/>
+    </linearGradient>
+    <linearGradient id="ribbonV" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e6cca0"/>
+      <stop offset="50%" stop-color="#fef7e9"/>
+      <stop offset="100%" stop-color="#c5a463"/>
+    </linearGradient>
+    <linearGradient id="ribbonH" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef7e9"/>
+      <stop offset="50%" stop-color="#e6cca0"/>
+      <stop offset="100%" stop-color="#a68444"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#2a060c" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo app icon -->
+  <rect width="512" height="512" rx="114" fill="url(#bg)"/>
+
+  <!-- Sombra caja -->
+  <g filter="url(#shadow)">
+    <!-- Cuerpo de la caja de regalo -->
+    <rect x="96" y="210" width="320" height="230" rx="16" fill="#882030" stroke="#a62c3e" stroke-width="4"/>
+    
+    <!-- Tapa de la caja de regalo -->
+    <rect x="80" y="165" width="352" height="65" rx="14" fill="#a4293c" stroke="#c0374c" stroke-width="4"/>
+  </g>
+
+  <!-- Cinta vertical de la caja -->
+  <rect x="226" y="210" width="60" height="230" fill="url(#ribbonV)"/>
+  
+  <!-- Cinta vertical en la tapa -->
+  <rect x="226" y="165" width="60" height="65" fill="url(#ribbonV)"/>
+
+  <!-- Cinta horizontal de la tapa -->
+  <rect x="80" y="180" width="352" height="35" fill="url(#ribbonH)" opacity="0.4"/>
+
+  <!-- Lazo / Moño del regalo -->
+  <!-- Lazo izquierdo -->
+  <path d="M 240 165 C 170 85 120 100 150 145 C 170 175 220 168 250 168 Z" fill="url(#gold)" filter="drop-shadow(0 4px 6px #0003)"/>
+  <!-- Lazo derecho -->
+  <path d="M 272 165 C 342 85 392 100 362 145 C 342 175 292 168 262 168 Z" fill="url(#gold)" filter="drop-shadow(0 4px 6px #0003)"/>
+  
+  <!-- Cintas colgantes del lazo -->
+  <path d="M 235 175 C 210 215 180 240 165 265 C 185 260 210 235 245 185 Z" fill="url(#gold)" opacity="0.95"/>
+  <path d="M 277 175 C 302 215 332 240 347 265 C 327 260 302 235 267 185 Z" fill="url(#gold)" opacity="0.95"/>
+
+  <!-- Nudo central del lazo -->
+  <circle cx="256" cy="168" r="24" fill="url(#gold)" filter="drop-shadow(0 4px 5px #0004)"/>
+  <circle cx="256" cy="168" r="16" fill="#fff5dc" opacity="0.4"/>
+
+  <!-- Pequeños destellos mágicos -->
+  <path d="M 140 100 Q 150 100 150 90 Q 150 100 160 100 Q 150 100 150 110 Q 150 100 140 100 Z" fill="#fae8be" opacity="0.8"/>
+  <path d="M 370 120 Q 378 120 378 112 Q 378 120 386 120 Q 378 120 378 128 Q 378 120 370 120 Z" fill="#fae8be" opacity="0.7"/>
+</svg>

@@ -1,0 +1,11 @@
+{
+  "name": "para-ti-diciembre",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nuestro quinto capítulo: un calendario de adviento personal",
+  "scripts": {
+    "dev": "node server.cjs",
+    "check": "node --check app.js && node --check config.js && node --check advent-state.js && node --check server.cjs",
+    "test": "node --test tests/advent-state.test.cjs"
+  }
+}
