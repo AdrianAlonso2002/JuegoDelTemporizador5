@@ -63,8 +63,8 @@
       try {
         new Notification(next === 30 ? '¡Feliz Cumpleaños! 🎂' : `¡Tu regalo del día ${next} te espera! 🎁`, {
           body: next === 30 ? 'Hoy tienes preparado tu regalo especial de cumpleaños. ♡' : `Tienes el regalito del día ${next} listo para abrir hoy. ¡Ven a descubrirlo! ♡`,
-          icon: 'assets/gift-icon.svg',
-          badge: 'assets/gift-icon.svg',
+          icon: 'assets/gift-icon.png',
+          badge: 'assets/gift-icon.png',
           tag: 'daily-gift'
         });
         localStorage.setItem(notifiedKey, 'true');
